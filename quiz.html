@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo - Portal Alerta Digital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Portal Alerta Digital</a>
+            <div class="nav-right">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+                        <li><a href="tipos.html" data-i18n="nav.types">Tipos de Fake News</a></li>
+                        <li><a href="identificar.html" data-i18n="nav.identify">Como Identificar</a></li>
+                        <li><a href="exemplos.html" data-i18n="nav.examples">Exemplos Reais</a></li>
+                        <li><a href="quiz.html" data-i18n="nav.quiz">Quiz Interativo</a></li>
+                        <li><a href="mapa.html" data-i18n="nav.map">Mapa de Riscos</a></li>
+                        <li><a href="noticias.html" data-i18n="nav.news">Notícias &amp; Golpes</a></li>
+                        <li><a href="contato.html" data-i18n="nav.contact">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="lang-switch">
+                    <button data-lang="pt" type="button">PT</button>
+                    <button data-lang="en" type="button">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="news-ticker" id="news-ticker">
+        <div class="ticker-label">
+            <span class="ticker-dot" id="ticker-dot"></span>
+            <span id="ticker-label-text">AO VIVO</span>
+        </div>
+        <div class="ticker-viewport">
+            <div class="ticker-track" id="ticker-track"></div>
+        </div>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1 data-i18n="quiz.heroTitle">Quiz Interativo</h1>
+            <p data-i18n="quiz.heroSubtitle">Teste seus conhecimentos e descubra se você sabe identificar uma Fake News!</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-i18n="quiz.title">Teste Seus Conhecimentos</h2>
+            <p class="section-subtitle" data-i18n="quiz.subtitle">Responda ao nosso quiz rápido e descubra se você sabe identificar uma Fake News!</p>
+
+            <div class="quiz-card">
+                <div id="quiz-container">
+                    <div class="quiz-header">
+                        <span id="quiz-progress">Pergunta 1 de 3</span>
+                    </div>
+                    <h3 id="quiz-question">Carregando...</h3>
+
+                    <div class="quiz-options"></div>
+                </div>
+
+                <div id="result-container" class="hidden">
+                    <h3 data-i18n="quiz.resultTitle">Quiz Concluído!</h3>
+                    <p id="result-score">Você acertou 0 de 3 perguntas.</p>
+                    <p id="result-feedback"></p>
+                    <button onclick="restartQuiz()" class="btn-primary" data-i18n="quiz.tryAgain">Tentar Novamente</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p data-i18n="footer.credit">© 2026 Portal Alerta Digital. desenvolvido por Ícaro Assunção, aluno 1-DS-3 turma noite</p>
+            <p class="footer-sub">Cibersecurity</p>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+    <script src="news-ticker.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

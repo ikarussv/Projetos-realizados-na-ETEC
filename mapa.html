@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Riscos - Portal Alerta Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Portal Alerta Digital</a>
+            <div class="nav-right">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+                        <li><a href="tipos.html" data-i18n="nav.types">Tipos de Fake News</a></li>
+                        <li><a href="identificar.html" data-i18n="nav.identify">Como Identificar</a></li>
+                        <li><a href="exemplos.html" data-i18n="nav.examples">Exemplos Reais</a></li>
+                        <li><a href="quiz.html" data-i18n="nav.quiz">Quiz Interativo</a></li>
+                        <li><a href="mapa.html" data-i18n="nav.map">Mapa de Riscos</a></li>
+                        <li><a href="noticias.html" data-i18n="nav.news">Notícias &amp; Golpes</a></li>
+                        <li><a href="contato.html" data-i18n="nav.contact">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="lang-switch">
+                    <button data-lang="pt" type="button">PT</button>
+                    <button data-lang="en" type="button">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="news-ticker" id="news-ticker">
+        <div class="ticker-label">
+            <span class="ticker-dot" id="ticker-dot"></span>
+            <span id="ticker-label-text">AO VIVO</span>
+        </div>
+        <div class="ticker-viewport">
+            <div class="ticker-track" id="ticker-track"></div>
+        </div>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1 data-i18n="map.heroTitle">Mapa de Pontos de Atenção</h1>
+            <p data-i18n="map.heroSubtitle">Onde mais ocorrem roubos e furtos em São Vicente — e por que golpes online não aparecem num mapa.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-i18n="map.title">Roubos e Furtos por Bairro em São Vicente</h2>
+            <p class="section-subtitle" data-i18n="map.subtitle">Dados oficiais da Secretaria de Segurança Pública de SP, agregados por bairro, mostram onde a atenção deve ser redobrada.</p>
+
+            <div class="map-legend">
+                <span><span class="legend-dot legend-high"></span><span data-i18n="map.legendHigh">Alta incidência</span></span>
+                <span><span class="legend-dot legend-medium"></span><span data-i18n="map.legendMedium">Incidência média</span></span>
+                <span><span class="legend-dot legend-low"></span><span data-i18n="map.legendLow">Incidência menor</span></span>
+            </div>
+
+            <p class="view-options-note" data-i18n="map.viewOptionsNote">Use o botão no canto superior direito do mapa para alternar entre visão de Mapa e Satélite. Clique em qualquer marcador para abrir aquele ponto direto no Street View (Google) ou no Apple Maps.</p>
+
+            <div class="map-layout">
+                <div id="risk-map"></div>
+                <div class="map-sidebar">
+                    <h3 data-i18n="map.sidebarTitle">Bairros com mais ocorrências</h3>
+                    <div id="hotspot-list"></div>
+                </div>
+            </div>
+
+            <p class="data-source-note" data-i18n="map.sourceNote">Fontes: Secretaria de Segurança Pública de São Paulo (SSP-SP), via reportagens do jornal A Tribuna (2024) e Diário do Litoral / Santa Portal (2025). Os números representam o total de boletins de roubo e furto (incluindo celulares) registrados por bairro nos períodos consultados. Os marcadores foram posicionados no centro aproximado de cada bairro — não indicam endereços exatos. Para dados atualizados em tempo real, consulte o portal da SSP-SP ou a delegacia local.</p>
+
+            <div class="scam-callout">
+                <h3 data-i18n="map.scamCalloutTitle">E os golpes (estelionato digital)? Por que não estão no mapa</h3>
+                <p data-i18n="map.scamCalloutText">Diferente do roubo e do furto, que acontecem em um lugar físico, golpes como falso suporte bancário, falsas promoções e fraudes via PIX ou WhatsApp acontecem pelo telefone ou internet — não têm um endereço fixo. Por isso, a melhor defesa contra eles não é evitar um bairro, e sim aplicar as mesmas técnicas de verificação que você aprendeu neste portal.</p>
+            </div>
+
+            <h3 class="section-title" style="margin-top:45px; font-size:1.5rem;" data-i18n="map.tipsTitle">Como se proteger no dia a dia</h3>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h4 data-i18n="map.tip1.title">Na rua</h4>
+                    <p data-i18n="map.tip1.desc">Evite usar o celular distraidamente em pontos de ônibus e calçadas movimentadas, principalmente no Centro e nos bairros listados ao lado.</p>
+                </div>
+                <div class="tip-card">
+                    <h4 data-i18n="map.tip2.title">Em casa</h4>
+                    <p data-i18n="map.tip2.desc">Desconfie de ligações ou mensagens pedindo dados bancários, mesmo que pareçam vir do seu banco ou de órgãos públicos.</p>
+                </div>
+                <div class="tip-card">
+                    <h4 data-i18n="map.tip3.title">No WhatsApp e redes sociais</h4>
+                    <p data-i18n="map.tip3.desc">Nunca compartilhe códigos de verificação (SMS) e confirme promoções diretamente no site oficial da empresa.</p>
+                </div>
+                <div class="tip-card">
+                    <h4 data-i18n="map.tip4.title">Em caso de emergência</h4>
+                    <p data-i18n="map.tip4.desc">Ligue 190 (Polícia Militar) para ocorrências em andamento ou registre um Boletim de Ocorrência na delegacia mais próxima.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p data-i18n="footer.credit">© 2026 Portal Alerta Digital. desenvolvido por Ícaro Assunção, aluno 1-DS-3 turma noite</p>
+            <p class="footer-sub">Cibersecurity</p>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+    <script src="news-ticker.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="map.js"></script>
+</body>
+</html>

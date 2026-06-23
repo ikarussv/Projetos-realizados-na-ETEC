@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias de TI e Golpes Digitais - Portal Alerta Digital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Portal Alerta Digital</a>
+            <div class="nav-right">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+                        <li><a href="tipos.html" data-i18n="nav.types">Tipos de Fake News</a></li>
+                        <li><a href="identificar.html" data-i18n="nav.identify">Como Identificar</a></li>
+                        <li><a href="exemplos.html" data-i18n="nav.examples">Exemplos Reais</a></li>
+                        <li><a href="quiz.html" data-i18n="nav.quiz">Quiz Interativo</a></li>
+                        <li><a href="mapa.html" data-i18n="nav.map">Mapa de Riscos</a></li>
+                        <li><a href="noticias.html" data-i18n="nav.news">Notícias &amp; Golpes</a></li>
+                        <li><a href="contato.html" data-i18n="nav.contact">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="lang-switch">
+                    <button data-lang="pt" type="button">PT</button>
+                    <button data-lang="en" type="button">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="news-ticker" id="news-ticker">
+        <div class="ticker-label">
+            <span class="ticker-dot" id="ticker-dot"></span>
+            <span id="ticker-label-text">AO VIVO</span>
+        </div>
+        <div class="ticker-viewport">
+            <div class="ticker-track" id="ticker-track"></div>
+        </div>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1 data-i18n="news.heroTitle">Notícias de TI e Golpes Digitais</h1>
+            <p data-i18n="news.heroSubtitle">Fontes confiáveis para se manter informado e os golpes mais comuns para você reconhecer de longe.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-i18n="news.sourcesTitle">Onde Acompanhar Notícias Confiáveis de Tecnologia</h2>
+            <p class="section-subtitle" data-i18n="news.sourcesSubtitle">Estes veículos são referência em tecnologia e checagem de fatos no Brasil. Clique para visitar o site oficial de cada um:</p>
+
+            <div class="source-grid">
+                <a href="https://olhardigital.com.br/" target="_blank" rel="noopener noreferrer" class="source-card">
+                    <h3><span data-i18n="news.source1.name">Olhar Digital</span> <span class="external-icon">↗</span></h3>
+                    <p data-i18n="news.source1.desc">Um dos maiores portais de tecnologia do Brasil, com notícias diárias sobre inovação, inteligência artificial, gadgets e segurança digital.</p>
+                </a>
+                <a href="https://canaltech.com.br/seguranca/" target="_blank" rel="noopener noreferrer" class="source-card">
+                    <h3><span data-i18n="news.source2.name">Canaltech (Segurança)</span> <span class="external-icon">↗</span></h3>
+                    <p data-i18n="news.source2.desc">Cobertura completa de tecnologia, com uma editoria dedicada à Segurança onde golpes e fraudes digitais são destrinchados em detalhes.</p>
+                </a>
+                <a href="https://g1.globo.com/fato-ou-fake/" target="_blank" rel="noopener noreferrer" class="source-card">
+                    <h3><span data-i18n="news.source3.name">Fato ou Fake (G1)</span> <span class="external-icon">↗</span></h3>
+                    <p data-i18n="news.source3.desc">Serviço de checagem mantido pela Globo, que verifica boatos e conteúdos suspeitos que circulam na internet e no WhatsApp.</p>
+                </a>
+                <a href="https://www.agencialupa.org/" target="_blank" rel="noopener noreferrer" class="source-card">
+                    <h3><span data-i18n="news.source4.name">Agência Lupa</span> <span class="external-icon">↗</span></h3>
+                    <p data-i18n="news.source4.desc">Primeira agência de fact-checking do Brasil. Investiga declarações públicas e boatos virais com metodologia jornalística transparente.</p>
+                </a>
+            </div>
+            <p class="sources-note" data-i18n="news.sourcesNote">Esses links abrem em uma nova aba e levam a sites externos. O Portal Alerta Digital não tem qualquer vínculo oficial com esses veículos — são apenas sugestões de fontes confiáveis.</p>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title" data-i18n="news.scamsTitle">Principais Tipos de Golpes Digitais</h2>
+            <p class="section-subtitle" data-i18n="news.scamsSubtitle">Conheça as táticas mais usadas por criminosos para roubar dados, dinheiro e senhas:</p>
+
+            <div class="grid-layout">
+                <div class="card">
+                    <h3 data-i18n="news.scam1.title">Engenharia Social</h3>
+                    <p data-i18n="news.scam1.desc">A base de quase todo golpe digital: o criminoso manipula emoções como urgência, medo ou confiança para te convencer a agir sem pensar, sem precisar 'hackear' nada.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="news.scam2.title">Phishing</h3>
+                    <p data-i18n="news.scam2.desc">E-mails, SMS ou mensagens com links falsos que imitam bancos, lojas ou órgãos públicos para roubar senhas e dados do cartão.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="news.scam3.title">Vishing (Falsa Central de Atendimento)</h3>
+                    <p data-i18n="news.scam3.desc">Ligações de criminosos se passando por atendentes do banco ou de empresas, criando um clima de urgência para você revelar códigos de segurança.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="news.scam4.title">Golpe do Pix e WhatsApp Clonado</h3>
+                    <p data-i18n="news.scam4.desc">O criminoso clona seu número ou invade sua conta para pedir dinheiro 'emprestado' aos seus contatos, fingindo ser você em uma emergência.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="news.scam5.title">Falso Suporte Técnico</h3>
+                    <p data-i18n="news.scam5.desc">Pop-ups ou ligações alegando que seu computador está infectado, pedindo acesso remoto ao aparelho ou pagamento por um 'reparo' falso.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="news.scam6.title">Falso Boleto ou Fatura</h3>
+                    <p data-i18n="news.scam6.desc">Boletos com o código de barras alterado, redirecionando o pagamento direto para a conta do criminoso em vez do destinatário real.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="news.scam7.title">Golpe do Amor (Romance Scam)</h3>
+                    <p data-i18n="news.scam7.desc">Perfis falsos em redes sociais ou apps de namoro constroem um relacionamento de confiança ao longo de semanas só para depois pedir dinheiro.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="news.scam8.title">Ransomware</h3>
+                    <p data-i18n="news.scam8.desc">Um programa malicioso 'sequestra' os arquivos do dispositivo, criptografando tudo, e só libera o acesso de volta após o pagamento de um resgate.</p>
+                </div>
+            </div>
+
+            <div class="scam-callout">
+                <h3 data-i18n="news.scamsTipTitle">Como se proteger desses golpes</h3>
+                <p data-i18n="news.scamsTipText">Nunca compartilhe senhas, códigos de SMS ou dados bancários por telefone ou WhatsApp. Bancos e órgãos públicos nunca pedem isso. Em caso de dúvida, desligue e ligue de volta usando o número oficial da instituição.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p data-i18n="footer.credit">© 2026 Portal Alerta Digital. desenvolvido por Ícaro Assunção, aluno 1-DS-3 turma noite</p>
+            <p class="footer-sub">Cibersecurity</p>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+    <script src="news-ticker.js"></script>
+</body>
+</html>

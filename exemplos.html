@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos Reais - Portal Alerta Digital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Portal Alerta Digital</a>
+            <div class="nav-right">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+                        <li><a href="tipos.html" data-i18n="nav.types">Tipos de Fake News</a></li>
+                        <li><a href="identificar.html" data-i18n="nav.identify">Como Identificar</a></li>
+                        <li><a href="exemplos.html" data-i18n="nav.examples">Exemplos Reais</a></li>
+                        <li><a href="quiz.html" data-i18n="nav.quiz">Quiz Interativo</a></li>
+                        <li><a href="mapa.html" data-i18n="nav.map">Mapa de Riscos</a></li>
+                        <li><a href="noticias.html" data-i18n="nav.news">Notícias &amp; Golpes</a></li>
+                        <li><a href="contato.html" data-i18n="nav.contact">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="lang-switch">
+                    <button data-lang="pt" type="button">PT</button>
+                    <button data-lang="en" type="button">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="news-ticker" id="news-ticker">
+        <div class="ticker-label">
+            <span class="ticker-dot" id="ticker-dot"></span>
+            <span id="ticker-label-text">AO VIVO</span>
+        </div>
+        <div class="ticker-viewport">
+            <div class="ticker-track" id="ticker-track"></div>
+        </div>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1 data-i18n="examples.heroTitle">Exemplos Reais</h1>
+            <p data-i18n="examples.heroSubtitle">Veja a desinformação na prática e teste suas próprias frases suspeitas.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-i18n="examples.title">Exemplos Educativos</h2>
+            <p class="section-subtitle" data-i18n="examples.subtitle">Veja como a desinformação funciona na prática comparada com a realidade:</p>
+
+            <div class="comparison-container">
+                <div class="comparison-box fake">
+                    <div class="box-badge" data-i18n="examples.fakeBadge">Boato / Fake News</div>
+                    <h3 data-i18n="examples.fakeTitle">"Chá de casca de laranja cura qualquer vírus em 24 horas!"</h3>
+                    <p><strong data-i18n="examples.fakeWhy">Por que é falso?</strong> <span data-i18n="examples.fakeDesc">Não existe comprovação científica. Foi espalhado em grupos de mensagens usando o nome de um "médico famoso" que nem sequer existe.</span></p>
+                </div>
+                <div class="comparison-box real">
+                    <div class="box-badge" data-i18n="examples.realBadge">Notícia Verdadeira</div>
+                    <h3 data-i18n="examples.realTitle">"Cientistas reforçam a importância de uma alimentação equilibrada para a imunidade"</h3>
+                    <p><strong data-i18n="examples.realWhy">Por que é real?</strong> <span data-i18n="examples.realDesc">Publicado por portais de saúde renomados, traz entrevistas com médicos reais e explica que alimentos ajudam na prevenção, mas não curam doenças sozinhos.</span></p>
+                </div>
+            </div>
+
+            <div class="checker-tool">
+                <h3 data-i18n="examples.checkerTitle">Simulador de Verificação</h3>
+                <p data-i18n="examples.checkerText">Cole uma frase ou manchete suspeita abaixo para simular uma checagem rápida:</p>
+                <div class="checker-input-group">
+                    <input type="text" id="news-input" data-i18n-placeholder="examples.checkerPlaceholder" placeholder="Ex: Ganhe um brinde grátis clicando neste link agora...">
+                    <button onclick="simularVerificacao()" class="btn-accent" data-i18n="examples.checkerButton">Analisar Notícia</button>
+                </div>
+                <div id="checker-result" class="checker-result-box hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p data-i18n="footer.credit">© 2026 Portal Alerta Digital. desenvolvido por Ícaro Assunção, aluno 1-DS-3 turma noite</p>
+            <p class="footer-sub">Cibersecurity</p>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+    <script src="news-ticker.js"></script>
+</body>
+</html>

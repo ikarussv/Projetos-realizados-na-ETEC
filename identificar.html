@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Identificar Fake News - Portal Alerta Digital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Portal Alerta Digital</a>
+            <div class="nav-right">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+                        <li><a href="tipos.html" data-i18n="nav.types">Tipos de Fake News</a></li>
+                        <li><a href="identificar.html" data-i18n="nav.identify">Como Identificar</a></li>
+                        <li><a href="exemplos.html" data-i18n="nav.examples">Exemplos Reais</a></li>
+                        <li><a href="quiz.html" data-i18n="nav.quiz">Quiz Interativo</a></li>
+                        <li><a href="mapa.html" data-i18n="nav.map">Mapa de Riscos</a></li>
+                        <li><a href="noticias.html" data-i18n="nav.news">Notícias &amp; Golpes</a></li>
+                        <li><a href="contato.html" data-i18n="nav.contact">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="lang-switch">
+                    <button data-lang="pt" type="button">PT</button>
+                    <button data-lang="en" type="button">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="news-ticker" id="news-ticker">
+        <div class="ticker-label">
+            <span class="ticker-dot" id="ticker-dot"></span>
+            <span id="ticker-label-text">AO VIVO</span>
+        </div>
+        <div class="ticker-viewport">
+            <div class="ticker-track" id="ticker-track"></div>
+        </div>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1 data-i18n="identify.heroTitle">Como Identificar Notícias Falsas</h1>
+            <p data-i18n="identify.heroSubtitle">Um guia prático antes de repassar qualquer mensagem.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-i18n="identify.title">Guia Prático: Como Identificar Notícias Falsas</h2>
+            <p class="section-subtitle" data-i18n="identify.subtitle">Siga este passo a passo antes de repassar qualquer mensagem no WhatsApp ou redes sociais:</p>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-i18n="identify.step1.title">Verifique a Fonte</h3>
+                        <p data-i18n="identify.step1.desc">Olhe o nome do site. É um portal de notícias conhecido e confiável? Se for um blog desconhecido ou cheio de anúncios estranhos, desconfie.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-i18n="identify.step2.title">Conferir a Data</h3>
+                        <p data-i18n="identify.step2.desc">Muitas boatos são notícias reais que aconteceram anos atrás. Veja o dia, mês e ano da publicação antes de reagir.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-i18n="identify.step3.title">Comparar com outros sites</h3>
+                        <p data-i18n="identify.step3.desc">Jogue o título no Google. Se a notícia for muito importante e apenas um site estiver falando sobre ela, há uma enorme chance de ser falsa.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 data-i18n="identify.step4.title">Desconfie de Manchetes Exageradas</h3>
+                        <p data-i18n="identify.step4.desc">Títulos com muitas exclamações (!!!), letras maiúsculas (URGENTE) ou palavras apelativas ("O sistema não quer que você saiba") são sinais clássicos de alerta.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3 data-i18n="identify.step5.title">Checar Imagens</h3>
+                        <p data-i18n="identify.step5.desc">Use ferramentas de busca reversa de imagem ou repare se a foto parece antiga, fora de foco ou desconexa com o texto apresentado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p data-i18n="footer.credit">© 2026 Portal Alerta Digital. desenvolvido por Ícaro Assunção, aluno 1-DS-3 turma noite</p>
+            <p class="footer-sub">Cibersecurity</p>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+    <script src="news-ticker.js"></script>
+</body>
+</html>

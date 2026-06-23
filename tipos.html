@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Fake News - Portal Alerta Digital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Portal Alerta Digital</a>
+            <div class="nav-right">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+                        <li><a href="tipos.html" data-i18n="nav.types">Tipos de Fake News</a></li>
+                        <li><a href="identificar.html" data-i18n="nav.identify">Como Identificar</a></li>
+                        <li><a href="exemplos.html" data-i18n="nav.examples">Exemplos Reais</a></li>
+                        <li><a href="quiz.html" data-i18n="nav.quiz">Quiz Interativo</a></li>
+                        <li><a href="mapa.html" data-i18n="nav.map">Mapa de Riscos</a></li>
+                        <li><a href="noticias.html" data-i18n="nav.news">Notícias &amp; Golpes</a></li>
+                        <li><a href="contato.html" data-i18n="nav.contact">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="lang-switch">
+                    <button data-lang="pt" type="button">PT</button>
+                    <button data-lang="en" type="button">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="news-ticker" id="news-ticker">
+        <div class="ticker-label">
+            <span class="ticker-dot" id="ticker-dot"></span>
+            <span id="ticker-label-text">AO VIVO</span>
+        </div>
+        <div class="ticker-viewport">
+            <div class="ticker-track" id="ticker-track"></div>
+        </div>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1 data-i18n="types.heroTitle">Tipos de Fake News</h1>
+            <p data-i18n="types.heroSubtitle">Entenda as diferentes formas que a desinformação pode assumir.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-i18n="types.title">Principais Tipos de Desinformação</h2>
+            <p class="section-subtitle" data-i18n="types.subtitle">A mentira na internet se veste de várias formas. Conheça as mais comuns:</p>
+
+            <div class="grid-layout">
+                <div class="card">
+                    <h3 data-i18n="types.card1.title">Completamente Falsas</h3>
+                    <p data-i18n="types.card1.desc">Notícias inventadas do zero, sem nenhum fundo de verdade, criadas puramente para enganar ou causar pânico.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="types.card2.title">Conteúdo Enganoso</h3>
+                    <p data-i18n="types.card2.desc">Usa dados reais ou falas verdadeiras de forma distorcida para fazer você chegar a uma conclusão errada.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="types.card3.title">Títulos Sensacionalistas (Clickbait)</h3>
+                    <p data-i18n="types.card3.desc">Manchetes exageradas que servem apenas para atrair cliques e gerar dinheiro com anúncios, sem compromisso com a verdade.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="types.card4.title">Imagens e Vídeos Manipulados</h3>
+                    <p data-i18n="types.card4.desc">Fotos cortadas, montagens ou vídeos alterados (e até Deepfakes criados por inteligência artificial) para inventar fatos.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="types.card5.title">Fora de Contexto</h3>
+                    <p data-i18n="types.card5.desc">Uma notícia antiga e verdadeira é republicada hoje como se fosse atual, mudando completamente o sentido do acontecimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p data-i18n="footer.credit">© 2026 Portal Alerta Digital. desenvolvido por Ícaro Assunção, aluno 1-DS-3 turma noite</p>
+            <p class="footer-sub">Cibersecurity</p>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+    <script src="news-ticker.js"></script>
+</body>
+</html>
